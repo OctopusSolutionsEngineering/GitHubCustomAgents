@@ -3,9 +3,10 @@ name: octopus-release-notes-with-mcp
 description: Generate release notes for a release in Octopus Deploy
 mcp-servers:
   octopus:
-    type: "local"
-    command: "npx"
-    args: ["whatever"]
+    type: 'local'
+    command: 'npx'
+    args: ['whatever']
+    tools: ['test']
 ---
 
 # Release Notes for Octopus Deploy
