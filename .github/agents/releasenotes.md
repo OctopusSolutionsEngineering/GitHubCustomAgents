@@ -12,7 +12,6 @@ mcp-servers:
     - ${{ secrets.OCTOPUS_API_KEY }}
     - '--server-url'
     - ${{ secrets.OCTOPUS_SERVER_URL }}
-    
     transport: 'stdio'
     tools:
     - 'get_account'
