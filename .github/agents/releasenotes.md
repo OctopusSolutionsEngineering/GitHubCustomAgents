@@ -9,7 +9,7 @@ mcp-servers:
     - '-y'
     - '@octopusdeploy/mcp-server'
     - '--api-key'
-    - ${{ secrets.OCTOPUS_API_KEY }},
+    - ${{ secrets.OCTOPUS_API_KEY }}
     - '--server-url'
     - ${{ secrets.OCTOPUS_SERVER_URL }}
     
