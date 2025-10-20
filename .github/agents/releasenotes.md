@@ -1,6 +1,6 @@
 ---
 name: octopus-release-notes-with-mcp
-description: Generate release notes for a release in Octopus Deploy
+description: Generate release notes for a release in Octopus Deploy. The tools for this MCP server provide access to the Octopus Deploy APIs.
 mcp-servers:
   octopus:
     type: 'local'
