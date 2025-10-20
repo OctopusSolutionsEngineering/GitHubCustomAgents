@@ -41,6 +41,7 @@ mcp-servers:
       "list_spaces",
       "list_tenants"
     ]
+
 ---
 
 # Release Notes for Octopus Deploy
