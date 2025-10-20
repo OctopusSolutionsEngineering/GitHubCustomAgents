@@ -47,7 +47,27 @@ For public repositories, a token is not required. For private repositories or to
 
 ## Usage
 
-### Basic Usage
+### Easy Usage (Shell Script)
+
+The easiest way to generate release notes is using the provided shell script:
+
+```bash
+./generate-release-notes.sh \
+    --project "Octopus Copilot Function" \
+    --environment "Production" \
+    --space "Octopus Copilot" \
+    --github-repo "owner/repo"
+```
+
+The shell script automatically:
+- Loads environment variables from `.env` file
+- Validates prerequisites
+- Provides colored output
+- Shows a preview of the generated notes
+
+### Direct Python Usage
+
+You can also call the Python script directly:
 
 ```bash
 python3 generate_release_notes.py \
@@ -58,6 +78,17 @@ python3 generate_release_notes.py \
 ```
 
 ### With Custom Output File
+
+```bash
+./generate-release-notes.sh \
+    --project "Octopus Copilot Function" \
+    --environment "Production" \
+    --space "Octopus Copilot" \
+    --github-repo "owner/repo" \
+    --output "releases/v1.0.0-notes.md"
+```
+
+Or with the Python script directly:
 
 ```bash
 python3 generate_release_notes.py \

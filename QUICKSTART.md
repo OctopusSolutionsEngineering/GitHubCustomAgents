@@ -43,7 +43,23 @@ export GITHUB_TOKEN="ghp_xxxxxxxxxxxxxxxxxxxx"  # Optional
 
 ## 3️⃣ Generate Release Notes
 
-Run the script with your project details:
+### Option A: Using the Shell Script (Easiest)
+
+```bash
+./generate-release-notes.sh \
+    --project "Octopus Copilot Function" \
+    --environment "Production" \
+    --space "Octopus Copilot" \
+    --github-repo "owner/repo"
+```
+
+The shell script provides:
+- ✅ Automatic environment variable loading
+- ✅ Colored output for better readability
+- ✅ Input validation
+- ✅ Preview of generated notes
+
+### Option B: Using Python Directly
 
 ```bash
 python3 generate_release_notes.py \
@@ -81,7 +97,14 @@ If you want to generate release notes for the specific project mentioned in this
 export OCTOPUS_SERVER_URL="https://your-instance.octopus.app"
 export OCTOPUS_API_KEY="API-XXXXXXXXXXXXXXXXXXXXXXXXXX"
 
-# 2. Run the generator
+# 2. Run the generator (using shell script - recommended)
+./generate-release-notes.sh \
+    --project "Octopus Copilot Function" \
+    --environment "Production" \
+    --space "Octopus Copilot" \
+    --github-repo "your-org/your-repo"
+
+# OR run using Python directly
 python3 generate_release_notes.py \
     --project "Octopus Copilot Function" \
     --environment "Production" \
