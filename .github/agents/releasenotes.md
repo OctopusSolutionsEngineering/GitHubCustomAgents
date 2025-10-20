@@ -8,7 +8,6 @@ mcp-servers:
     args: 
     - '-y'
     - '@octopusdeploy/mcp-server'
-    transport: 'stdio'
     env:
       OCTOPUS_API_KEY: ${{ secrets.OCTOPUS_API_KEY }}
       OCTOPUS_SERVER_URL: ${{ secrets.OCTOPUS_SERVER_URL }}
