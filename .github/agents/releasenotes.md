@@ -5,7 +5,7 @@ mcp-servers:
   octopus:
     type: "local"
     command: "npx"
-    args: ["-y", "@octopusdeploy/mcp-server", "--api-key", "${{ secrets.OCTOPUS_API_KEY }}", "--server-url", "${{ secrets.OCTOPUS_SERVER_URL }}"],
+    args: ["-y", "@octopusdeploy/mcp-server", "--api-key", "${{ secrets.OCTOPUS_API_KEY }}", "--server-url", "${{ secrets.OCTOPUS_SERVER_URL }}"]
     transport: "stdio"
 ---
 
