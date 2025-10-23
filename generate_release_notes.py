@@ -144,10 +144,22 @@ class OctopusReleaseNotesGenerator:
     def parse_github_url(self, url: str) -> tuple:
         """Parse GitHub URL to extract owner and repo."""
         # Expected format: https://github.com/owner/repo/commit/sha
-        if 'github.com' in url:
-            parts = url.split('github.com/')[1].split('/')
-            if len(parts) >= 2:
-                return parts[0], parts[1]
+        # Use proper URL parsing to avoid security issues
+        from urllib.parse import urlparse
+        
+        try:
+            parsed = urlparse(url)
+            # Verify it's actually a GitHub URL
+            if parsed.netloc != 'github.com':
+                return None, None
+            
+            # Path should be /owner/repo/...
+            path_parts = parsed.path.strip('/').split('/')
+            if len(path_parts) >= 2:
+                return path_parts[0], path_parts[1]
+        except Exception:
+            pass
+        
         return None, None
     
     def generate_release_notes(self, space_name: str, project_name: str, environment_name: str) -> str:
