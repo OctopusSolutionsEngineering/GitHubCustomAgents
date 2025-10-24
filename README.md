@@ -3,6 +3,10 @@
 This GitHub custom agent generates release notes from a deployment in Octopus Deploy. It combines the high-level release notes
 from Octopus Deploy with the details of the Git commits from GitHub to produce a comprehensive set of release notes in markdown format.
 
+A sample prompt is
+
+> Generate the release notes for the latest release of project "My Web App" in the environment "Production" in the space "Web".
+
 This is the MCP definition:
 
 ```json
