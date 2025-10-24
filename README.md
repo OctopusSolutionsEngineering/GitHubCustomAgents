@@ -15,7 +15,7 @@ This is the MCP definition:
             "-y", 
             "@octopusdeploy/mcp-server"
         ],
-            "env": {
+        "env": {
             "OCTOPUS_SERVER_URL": "COPILOT_MCP_OCTOPUS_SERVER_URL",
             "OCTOPUS_API_KEY": "COPILOT_MCP_OCTOPUS_API_KEY"
         },
